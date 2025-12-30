@@ -1,18 +1,15 @@
 from fastapi import APIRouter
-import time
+from app.services.llm import MockLLMClient
 
 router = APIRouter()
+llm = MockLLMClient()
 
 @router.post("/infer")
 def infer(prompt: str):
-    start = time.time()
-
-    # mock LLM response
-    response = f"Echo: {prompt}"
-
-    latency = (time.time() - start) * 1000
+    result = llm.generate(prompt)
 
     return {
-        "response": response,
-        "latency_ms": latency
+        "response": result["response"],
+        "latency_ms": result["latency_ms"],
+        "tokens_used": result["tokens_used"]
     }
