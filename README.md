@@ -8,7 +8,7 @@ This project was built as part of the **AI Partner Catalyst: Accelerate Innovati
 
 ---
 
-## 🚀 Problem Statement
+##  Problem Statement
 
 Most LLM demos treat the model as a black box:
 - No visibility into latency
@@ -24,7 +24,7 @@ In production systems, this lack of observability leads to:
 
 ---
 
-## 💡 Solution
+##  Solution
 
 LLM Pulse treats the LLM as a **production dependency**, not a demo feature.
 
@@ -39,7 +39,7 @@ The architecture is **vendor-agnostic** and can be extended to any LLM provider.
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 - **FastAPI** backend exposes an `/infer` endpoint
 - **LLM service abstraction** decouples the model from application logic
@@ -52,7 +52,7 @@ Client → FastAPI → LLM Service → Metrics Emitter → Dashboards / Alerts
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 llm-pulse/
 │
@@ -86,7 +86,7 @@ llm-pulse/
 
 ---
 
-## 📊 Observability Metrics
+##  Observability Metrics
 
 LLM Pulse tracks the following **core production metrics**:
 
@@ -102,9 +102,9 @@ These metrics align with industry best practices for operating LLM systems.
 
 ---
 
-## 📈 Observability Dashboards
+##  Observability Dashboards
 
-### 1️⃣ LLM Performance Overview
+###  LLM Performance Overview
 - Request latency (p50 / p95)
 - Request count
 
@@ -112,7 +112,7 @@ These metrics align with industry best practices for operating LLM systems.
 
 ---
 
-### 2️⃣ Usage & Cost Signals
+###  Usage & Cost Signals
 - Tokens used per request
 - Token usage trends over time
 
@@ -120,7 +120,7 @@ These metrics align with industry best practices for operating LLM systems.
 
 ---
 
-### 3️⃣ Safety & Prompt Risk
+###  Safety & Prompt Risk
 - Prompt length distribution
 - Spike detection for unusually long prompts
 
@@ -128,7 +128,7 @@ These metrics align with industry best practices for operating LLM systems.
 
 ---
 
-### 4️⃣ Reliability & Errors
+###  Reliability & Errors
 - Error rate over time
 - Incident correlation
 
@@ -136,7 +136,7 @@ These metrics align with industry best practices for operating LLM systems.
 
 ---
 
-## 🚨 Alerts & Incident Detection
+##  Alerts & Incident Detection
 
 Example production alerts:
 
@@ -154,7 +154,7 @@ Example production alerts:
 
 ---
 
-## 🧠 Why Observability Matters for LLMs
+##  Why Observability Matters for LLMs
 
 LLMs behave differently from traditional services.  
 Latency, cost, and safety risks are often hidden inside prompts and responses.
@@ -167,6 +167,6 @@ LLM Pulse demonstrates how treating LLMs as **observable production services** e
 - Better governance and accountability
 
 ---
-## 👤 Author
+##  Author
 
 Built by Aditi Singh
